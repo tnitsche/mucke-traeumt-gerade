@@ -1,0 +1,28 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td>
+      <%= image_tag(photo.image_url(:small)) if photo.image_url %>
+      <%= image_tag(photo.image_url(:medium)) if photo.image_url %>
+      <%= image_tag(photo.image_url(:standard)) if photo.image_url %>
+      <%=h photo.title %>
+    </td>
+    <td><%= link_to 'Show', photo %></td>
+    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photo', new_photo_path %>

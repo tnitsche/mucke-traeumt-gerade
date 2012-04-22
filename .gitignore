@@ -16,3 +16,5 @@
 
 .rbenv-version
 
+# Ignore uploads
+/public/uploads/

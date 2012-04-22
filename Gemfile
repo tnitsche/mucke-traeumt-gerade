@@ -4,6 +4,8 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'json'
 gem 'jquery-rails'
+gem "rmagick"
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.
